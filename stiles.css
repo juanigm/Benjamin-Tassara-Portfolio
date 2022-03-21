@@ -355,23 +355,30 @@ h1{
     color: #F4F1F2;
 }
 
+.aboutme__content-description p {
+    margin: 15px 0 ;
+}
+
 
 .aboutme__portrait{
     width: 300px;
     height: 300px;
     margin: 20px 0;
+    transform: scale(0.9);
+    transition: .9s ease-in-out all;
 }
 
 .aboutme__portrait img{
     height: 100%;
     width: 100%;
+    border: 10px solid var(--color-secondary);
     object-fit: contain;
     opacity: 0;
     transform: scale(0.9);
     transition: .9s ease-in-out all;
 }
 
-.aboutme__portrait img.visible{
+.aboutme__portrait.visible, img.visible{
     opacity: 1;
     transform: scale(1);
 }
@@ -742,11 +749,6 @@ h1{
         padding: var(--paddng-sections-responsive);
     }
 
-    .aboutme__portrait{
-        width: 400px;
-        height: 400px;
-    }
-
     .aboutme__content{
         width: 100%;
         display: flex;
@@ -758,10 +760,12 @@ h1{
     .aboutme__content-description{
         flex-grow: 1;
         width: 300px;
+        font-size: 18px;
     }
     
     .aboutme__content-description p{
         margin: 10px 0;
+        width: 100%;
     }
 
 
