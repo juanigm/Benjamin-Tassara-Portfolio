@@ -5,8 +5,8 @@
 }
 
 :root {
-    --padding-sections: 4em 2em;
-    --paddng-sections-responsive: 5em;
+    --padding-sections: 4em 2em ;
+    --paddng-sections-responsive: 6em;
     --color-dominated: #262626;
     --color-secondary: #94f0dc;
     --main-font: 'Anton', sans-serif;
@@ -125,7 +125,7 @@ h1{
 
 .button-container{
     position: absolute;
-    top: 83%;
+    top: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -303,6 +303,7 @@ h1{
     margin:10px;
 }
 
+
 /*.nav__li i{
     margin: 5px;
     text-decoration: none;
@@ -339,22 +340,32 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: var(--padding-sections);
     scroll-margin-top: var(--scroll-space);
+}
+
+.aboutme__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main__aboutme p{
     color: #F4F1F2;
 }
 
-/*
+
 .aboutme__portrait{
-    border: 1px solid #F4F1F2;
+    width: 300px;
+    height: 300px;
+    margin: 20px 0;
 }
-*/
+
 .aboutme__portrait img{
     height: 100%;
-
+    width: 100%;
+    object-fit: contain;
     opacity: 0;
     transform: scale(0.9);
     transition: .9s ease-in-out all;
@@ -366,10 +377,18 @@ h1{
 }
 
 .headings{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+}
+
+.headings-color{
+    font-size: 40px;
+    font-family: 'Anton', sans-serif;
+    color: var(--color-secondary);
 }
 
 .headings h2{
@@ -377,7 +396,7 @@ h1{
     font-family: 'Anton', sans-serif;
 }
 
-#aboutme__headings h2{
+.aboutme__headings h2{
     color: #F4F1F2;
 }
 
@@ -621,6 +640,7 @@ h1{
     margin: 5px;
 }
 
+
 @media screen and (min-width: 900px){
 
 
@@ -630,6 +650,11 @@ h1{
         display: grid;
         grid-template-rows:  0px 100vh 1fr 80px;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .content__header{
+        padding: inherit;
+        padding: 0 4em;
     }
 
     .content__header.background{
@@ -707,14 +732,56 @@ h1{
         font-size: 40px;
     }
 
-    
+
     .button__ul i{
         font-size: 48px;
+    }
+
+    .main__aboutme{
+        padding: inherit;
+        padding: var(--paddng-sections-responsive);
     }
 
     .aboutme__portrait{
         width: 400px;
         height: 400px;
+    }
+
+    .aboutme__content{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: unset;
+        gap: 20px;
+    }
+
+    .aboutme__content-description{
+        flex-grow: 1;
+        width: 300px;
+    }
+    
+    .aboutme__content-description p{
+        margin: 10px 0;
+    }
+
+
+    .aboutme__portrait{
+        margin: 0 auto;
+        height: 500px;
+        width: 500px;
+    }
+
+    .aboutme__portrait img{
+        object-fit: cover;
+    }
+
+    .headings{
+        text-align: inherit;
+        display: inline;
+    }
+
+    .headings-color{
+        font-size: var(--desktop-font-header-sections);
     }
 
     .headings h2{
@@ -748,6 +815,15 @@ h1{
     }
 */
 
+    .main__portfolio{
+        padding: inherit;
+        padding: var(--paddng-sections-responsive);
+    }
+
+    .main__experience{
+        padding: inherit;
+        padding: var(--paddng-sections-responsive);
+    }
 
     .experience__container{
         flex-direction: row;
@@ -763,17 +839,22 @@ h1{
         width: 300px;
     }
 
-    .form-container{
-        background-color: #F4F1F2;
-        border-radius: .2em;
-        padding: 8px;
-        margin: 20px auto;
+    .main__contactme{
+        padding: inherit;
+        padding: var(--paddng-sections-responsive);
     }
     
     .contactme__form{
         margin: 10px;
     }
     
+    .form-container{
+        background-color: #F4F1F2;
+        border-radius: .2em;
+        padding: 8px;
+        margin: 20px auto;
+    }
+
     .form__input{
         width: 100%;
         margin: 8px auto;
@@ -825,7 +906,7 @@ h1{
     }
 }
 
-@media screen and (max-width: 1103px){
+@media screen and (max-width: 1400px){
     .title{
         font-size: 7.5vw;
     }
