@@ -6,12 +6,12 @@
 
 :root {
     --padding-sections: 4em 2em ;
-    --paddng-sections-responsive: 6em;
+    --paddng-sections-responsive: 5em;
     --color-dominated: #262626;
     --color-secondary: #94f0dc;
     --main-font: 'Anton', sans-serif;
     --color-hover-nav-menu: #838383;
-    --scroll-space: 74px;
+    --scroll-space: 30px;
     --desktop-font-header-sections: 80px
 }
 
@@ -60,6 +60,7 @@ p{
     width: 100%;
     font-size: 8vw;
     text-align: center;
+    line-height: .98;
 }
 
 h1{
@@ -115,12 +116,19 @@ h1{
     color: #F4F1F2;
 }
 
-.fa-play{
+.play{
+    width: 100px;
+    height: 70px;
     font-size: 30px;
     text-align: center;
-    padding: 14px 30px;
-    color: #F4F1F2;
     background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play i{
+    color: #F4F1F2;
 }
 
 .button-container{
@@ -133,6 +141,8 @@ h1{
 }
 
 .parallax__button{
+    width: 170px;
+    height: 70px;
     background-color: var(--color-secondary);
     font-size: 30px;
     padding: 14px 20px;
@@ -363,7 +373,6 @@ h1{
 .aboutme__portrait{
     width: 300px;
     height: 300px;
-    margin: 20px 0;
     transform: scale(0.9);
     transition: .9s ease-in-out all;
 }
@@ -401,16 +410,18 @@ h1{
 .headings h2{
     font-size: 40px;
     font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
 }
 
 .aboutme__headings h2{
     color: #F4F1F2;
 }
 
+
 .line{
-    height: 1px;
+    /*height: 1px;*/
     width: 150px;
-    margin: 30px 0;
+    margin: 10px 0;
 }
 
 #abt-line{
@@ -424,7 +435,7 @@ h1{
 }
 
 #port-line{
-    background-color: #000;
+    background-color: var(--color-dominated);
 }
 
 .portfolio__container-video{
@@ -433,6 +444,7 @@ h1{
     justify-content: center;
     flex-wrap: wrap;
     z-index: -1;
+    margin: 15px 0;
 }
 
 .portfolio__container-video .video-item{
@@ -474,7 +486,6 @@ h1{
 }
 
 .experience__container{
-    margin: 20px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -623,6 +634,8 @@ h1{
 }
 
 #ft-line{
+    height: 1px;
+    width: 150px;
     margin: 0 auto;
     background-color: #F4F1F2;
     width: 80%;
@@ -714,7 +727,14 @@ h1{
     }
 
     .parallax__button{
+        width: 300px;
+        height: 90px;
         font-size: 60px;
+    }
+
+    .play{
+        width: 130px;
+        height: 90px;
     }
 
     .fa-times{
@@ -766,22 +786,17 @@ h1{
     .aboutme__content-description p{
         margin: 10px 0;
         width: 100%;
+        font-size: 27px;
     }
 
 
-    .aboutme__portrait{
-        margin: 0 auto;
+    .aboutme__portrait{ 
         height: 500px;
         width: 500px;
     }
 
     .aboutme__portrait img{
         object-fit: cover;
-    }
-
-    .headings{
-        text-align: inherit;
-        display: inline;
     }
 
     .headings-color{
@@ -850,6 +865,10 @@ h1{
     
     .contactme__form{
         margin: 10px;
+    }
+
+    #cm__headings p {
+        font-size: 30px;
     }
     
     .form-container{

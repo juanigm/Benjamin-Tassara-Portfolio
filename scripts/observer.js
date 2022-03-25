@@ -5,13 +5,19 @@ const experienceItems = document.querySelectorAll('.card-item');
 
 const chargueImg = (entrie, observer) => {
     entrie.forEach((entry) => {
-        entry.target.classList.toggle('visible', entry.isIntersecting); 
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+        }
+         
     });
 }
 
 const chargueExperience = (entrie, observer) => {
     entrie.forEach((entry) => {
-        entry.target.classList.toggle('visible', entry.isIntersecting); 
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+        }
+         
     });
 }
 
