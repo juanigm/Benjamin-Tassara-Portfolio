@@ -660,6 +660,60 @@ h1{
     margin: 5px;
 }
 
+.modal-bg{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-200%);
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.modal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5000;
+    transform: translateY(-200%);
+    transition: all .5s;
+}
+
+.modal__content{
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    background-color: #F4F1F2;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+}
+
+.modal__content p{
+    color: var(--color-dominated);
+}
+
+.btn-close{
+    display: flex;
+}
+
+.btn-close i{
+    color: #262626;
+    font-size: 20px;
+    padding: inherit;
+}
+
+.modal-open{
+    transform: translateY(0);
+}
 
 @media screen and (min-width: 900px){
 
