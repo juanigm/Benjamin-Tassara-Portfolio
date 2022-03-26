@@ -453,18 +453,18 @@ h1{
     margin: .5rem 0;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
     overflow: hidden;
-    border-radius: 1rem;
 }
 
-.portfolio__container-video .video-item iframe{
+.portfolio__container-video .video-item img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     outline: none;
     border: none;
+    transform: scale(1.002);
 }
 
-.portfolio__container-video .video-item iframe:hover{
+.portfolio__container-video .video-item img:hover{
     transition: .2s linear;
     transform: scale(1.1);
     
