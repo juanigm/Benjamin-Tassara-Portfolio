@@ -453,6 +453,7 @@ h1{
     margin: .5rem 0;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
     overflow: hidden;
+    cursor: pointer;
 }
 
 .portfolio__container-video .video-item img{
@@ -461,7 +462,6 @@ h1{
     object-fit: cover;
     outline: none;
     border: none;
-    transform: scale(1.002);
 }
 
 .portfolio__container-video .video-item img:hover{
@@ -685,8 +685,10 @@ h1{
 }
 
 .modal__content{
-    width: 100%;
-    max-width: 400px;
+    width: 96vw;
+    height: 80vw;
+    max-width: 600px;
+    max-height: 400px;
     padding: 10px;
     background-color: #F4F1F2;
     border-radius: 4px;
@@ -695,6 +697,13 @@ h1{
     align-items: center;
     justify-content: space-evenly;
     position: absolute;
+}
+
+.video-item-a iframe{
+    width: 90vw;
+    height: 50vw;
+    max-width: 550px;
+    max-height: 300px;
 }
 
 .modal__content p{
@@ -968,6 +977,28 @@ h1{
 
     .footer__info{
         justify-content: space-around;
+    }
+
+    .modal__content{
+        width: 100%;
+        max-width: 900px;
+        max-height: none;
+        height: 600px;
+        padding: 10px;
+        background-color: #F4F1F2;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: absolute;
+    }
+
+    .video-item-a iframe{
+        width: 800px;
+        height: 450px;
+        max-width: none;
+        max-height: none;
     }
 }
 
